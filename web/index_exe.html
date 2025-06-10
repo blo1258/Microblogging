@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <nav class="main-nav">
+        </nav>
+
+    <main class="home-page-main-content">
+        <section class="create-post-section">
+            <h2>Partagez vos idées sur ici !</h2>
+            <form class="create-post-form">
+                <textarea placeholder="Quoi de neuf dans le monde ? (max 280 caractères)" maxlength="280"></textarea>
+                <div class="post-options">
+                    <label for="image-upload" class="icon-button"><i class="fas fa-image"></i></label>
+                    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+
+                    <label for="video-url" class="icon-button"><i class="fas fa-video"></i></label>
+                    <input type="url" id="video-url" placeholder="Lien vidéo YouTube/Vimeo" class="hidden-input">
+
+                    <label for="link-url" class="icon-button"><i class="fas fa-link"></i></label>
+                    <input type="url" id="link-url" placeholder="Lien d'article/ressource" class="hidden-input">
+
+                    <button type="submit" class="btn-primary">Publier</button>
+                </div>
+                <input type="text" placeholder="#Education #Beauté #Voyages" class="tag-input">
+            </form>
+        </section>
+
+        <hr class="section-divider">
+
+        <h2>Dernières Publications</h2> <section class="post-feed">
+            <article class="post-item post-text">
+                <a href="post1.html">
+                    <span class="category">#HTML #Accessibility</span>
+                    <h3>Les bases de l'accessibilité web</h3>
+                    <p class="post-excerpt">Apprenez les bonnes pratiques pour rendre vos sites accessibles à tous. Un guide rapide pour commencer !</p>
+                </a>
+                <div class="post-meta">
+                    <span class="post-date">Publié le 15 Octobre 2023</span>
+                    <span class="post-author">Par: Jean Dupont</span>
+                </div>
+                <div class="post-actions">
+                    <a href="#" class="action-btn like-btn"><i class="fas fa-thumbs-up"></i><span class="count-number">111</span></a>
+                    <a href="post1.html#comments" class="action-btn comment-btn"><i class="fas fa-comment"></i><span class="count-number">12</span></a>
+                    <a href="post1.html" class="action-btn read-more-btn"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </article>
+
+            <article class="post-item post-image">
+                <a href="post_image_example.html">
+                    <span class="category">#CSS #Grid</span>
+                    <img src="../asset/images/css_grid_example.png" alt="Exemple de CSS Grid Layout">
+                    <h3>Maîtriser CSS Grid en 5 minutes</h3>
+                    <p class="post-excerpt">Un petit guide visuel pour comprendre rapidement la puissance de CSS Grid. Simple et efficace !</p>
+                </a>
+                <div class="post-meta">
+                    <span class="post-date">Publié le 20 Octobre 2023</span>
+                    <span class="post-author">Par: Marie Curie</span>
+                </div>
+                <div class="post-actions">
+                    <a href="#" class="action-btn like-btn"><i class="fas fa-thumbs-up"></i><span class="count-number">35</span></a>
+                    <a href="post_image_example.html#comments" class="action-btn comment-btn"><i class="fas fa-comment"></i><span class="count-number">52</span></a>
+                    <a href="post_image_example.html" class="action-btn read-more-btn"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </article>
+
+            <article class="post-item post-video">
+                <a href="post_video_example.html">
+                    <span class="category">#JavaScript #Tutorial</span>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=p2rV9tKvjFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>Tutoriel rapide : Async/Await en JS</h3>
+                    <p class="post-excerpt">Une explication concise et des exemples pratiques pour maîtriser Async/Await en JavaScript.</p>
+                </a>
+                <div class="post-meta">
+                    <span class="post-date">Publié le 01 Décembre 2023</span>
+                    <span class="post-author">Par: Thomas Dubois</span>
+                </div>
+                <div class="post-actions">
+                    <a href="#" class="action-btn like-btn"><i class="fas fa-thumbs-up"></i><span class="count-number">8</span></a>
+                    <a href="post_video_example.html#comments" class="action-btn comment-btn"><i class="fas fa-comment"></i><span class="count-number">3</span></a>
+                    <a href="post_video_example.html" class="action-btn read-more-btn"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </article>
+
+            <article class="post-item post-link">
+                <a href="https://www.freecodecamp.org/news/learn-web-development-a-complete-guide/" target="_blank" rel="noopener noreferrer">
+                    <span class="category">#Ressource #Débutant</span>
+                    <img src="https://via.placeholder.com/400x200/cccccc/000000?text=FreeCodeCamp" alt="FreeCodeCamp Logo"> <h3>Guide Complet pour Débuter en Développement Web</h3>
+                    <p class="post-excerpt">Un excellent article de FreeCodeCamp pour tous les débutants. Plein de ressources !</p>
+                </a>
+                <div class="post-meta">
+                    <span class="post-date">Publié le 05 Janvier 2024</span>
+                    <span class="post-author">Par: DevExplorer</span>
+                </div>
+                <div class="post-actions">
+                    <a href="#" class="action-btn like-btn"><i class="fas fa-thumbs-up"></i><span class="count-number">220</span></a>
+                    <a href="post_link_example.html#comments" class="action-btn comment-btn"><i class="fas fa-comment"></i><span class="count-number">25</span></a>
+                    <a href="https://www.freecodecamp.org/news/learn-web-development-a-complete-guide/" target="_blank" rel="noopener noreferrer" class="action-btn read-more-btn"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </article>
+
+            </section>
+
+        <div class="load-more-posts">
+            <button class="btn-secondary">Charger plus de publications</button>
+        </div>
+
+        <section class="about-section">
+            <h2>À Propos de TumbFlow</h2>
+            <p>Bienvenue sur **TumbFlow**, votre plateforme de microblogging dédiée au monde passionnant du développement web. Partagez des astuces, des ressources, des tutoriels, des images et des vidéos pour construire la meilleure communauté de développeurs !</p>
+            <a href="a-propos.html" class="btn-read-more">En savoir plus sur notre mission</a>
+        </section>
+
+        <section class="newsletter-signup">
+            <h2>Rejoignez Notre Communauté !</h2>
+            <p>Ne manquez jamais les dernières publications et les meilleures ressources du Dev Web ! Abonnez-vous à notre newsletter.</p>
+            <form action="/subscribe" method="POST">
+                <input type="email" placeholder="Votre adresse e-mail" required>
+                <button type="submit">S'abonner</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        </footer>
+
+    <script src="../asset/js/script.js"></script> </body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TumbFlow - Connexion Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="stylesheet" href="../asset/css/admin-style.css">
+    
+</head>
+<body class="admin-login">
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"><img src="../asset/images/logo.png"></a>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-sun"></i></button>
+                <div class="lang-switcher">
+                    <select name="" id="language-select">
+                        <option value="en" selected>English</option>
+                        <option value="fr">Français</option>
+                        <option value="es">Español</option>
+                        <option value="de">Deutsch</option>
+                        <option value="tr">Turkçe</option>
+                        <option value="pt">Português</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  
+    <main class="auth-container admin-auth-container">
+        
+        <selection class="auth-card admin-login-card">
+            <h2>Admin Login</h2>
+            <form action="admin-dashboard.html" method="post" class="auth-form">
+            <div class="form-group">
+                <label for="admin-email"><i class="fas fa-user-shield"></i>Nom d'utilisateur Admin</label>
+                <input type="text" id="admin-email" name="admin_email" placeholder="Entrez votre nom d'utilisateur" required>
+            </div>
+           
+                <label for="admin-password"><i class="fas fa-lock"></i>Mot de passe Admin</label>
+                <input type="password" id="admin-password" name="admin_password" placeholder="Entrez votre mot de passe" required>
+            
+            <button type="submit" class="btn-submit admin-submit">Se connecter comme admin</button>
+        
+            <p class="auth-link">
+                <a href="login.html">Retour a la connexion utilisateur</a>
+            </p>
+                </form>
+        </selection>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,641 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C0B6B6;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.burger-menu {
+    font-size: 2em;
+    cursor: pointer;
+    margin-right: 15px;
+    display: block; /* pour mobile */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    
+    border-radius: 5px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slogan {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.main-menu {
+    display: none; /* masquer dans la mobile */
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu ul li {
+    margin-left: 15px;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-menu ul li a:hover {
+    color: #007bff;
+   
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right > div {
+    margin-left: 15px;
+}
+
+.theme-toggle button,
+.language-select select,
+.register-button button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent; 
+    color: black;
+    margin: 0 10px; 
+}
+
+.register-button button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+/* Mobile */
+.main-menu.mobile-menu-open {
+    display: block;
+    position: absolute;
+    top: 60px; /* Navbar  */
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* pour apparaitre au dessus */
+}
+
+.main-menu.mobile-menu-open ul {
+    flex-direction: column; /* pour vertical */
+    align-items: flex-start; /* a gauche */
+}
+
+.main-menu.mobile-menu-open ul li {
+    margin: 10px 0;
+}
+
+/* style grand ecran (768px et plus) */
+@media (min-width: 768px) {
+    .burger-menu {
+        display: none; /* masquer dans le grand ecran */
+    }
+    .main-menu {
+        display: flex; /* afficher dans le grand ecran */
+    }
+    .slogan {
+        margin-left: 20px;
+    }
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    
+    margin: 20px auto;
+    padding-bottom: 60px;
+    background-image: url('../images/pedagogie\ 1.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.titre-content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.texte-content {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+        margin: 10px auto;
+        padding-bottom: 70%;
+    }
+    .titre-content {
+        font-size: 1.5em;
+        padding: 8px;;
+    }
+    .text-content {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+.home-page {
+    padding: 20px;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+.post-item {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.post-item:hover {
+    transform: scale(1.05);
+}
+
+.post-item .category {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.9em;
+   font-weight: bold;
+    margin:10px 10px;
+    
+}
+
+.post-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.post-item p {
+    font-size: 1em;
+    color: #af9a9a;
+}
+
+.post-item a {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: #8494a7;
+    color:inherit;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.post-item img {
+    width: 95%;
+    max-width: 100%;
+    
+
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.post-item h3 {
+    font-size: 1.2em;
+    margin: 15px;
+    flex-grow: 1;
+}
+
+.post-item .post-excerpt {
+    margin: 0 15px 15px;
+    color: #240707;
+   flex-grow: 1;
+}
+
+.post-item .post-meta {
+    padding: 10px 15px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    font-size: 1em;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.post-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    gap: 10px;
+    padding: 10px 10px;
+    width: 100%;
+    
+}
+
+.post-actions a {
+    text-decoration: none;
+    color: white;
+    background-color: #d9534f; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-actions .action-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    
+    transition: background-color 0.3s ease;
+}
+.post-actions .action-btn:hover {
+    background-color: #ad5f5f;
+}
+.post-actions .action-btn i {
+    pointer-events: none; /* pour que l'icone bloque pas le clic */
+    margin-right: 5px;
+}
+
+
+
+.main-footer {
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    color: black;
+    font-size: 1em;
+
+
+}
+
+.footer-left .footer-logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.fa-envelope {
+    margin-right: 5px;
+    color: #007bff;
+    font-size: 24px;
+}
+.footer-right .social-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-left, .footer-right, .footer-center {
+        
+        margin-bottom: 10px;
+    }
+    .footer-right .social-icons a {
+        margin: 0 5px;
+    }
+}
+
+/* Genel Ayarlar ve Değişkenler (Eğer varsa, başlangıçta tanımlı olmalı) */
+:root {
+    --primary-color: #007bff; /* Mavi */
+    --secondary-color: #6c757d; /* Gri */
+    --background-light: #f8f9fa; /* Açık gri arka plan */
+    --background-dark: #343a40; /* Koyu gri arka plan (Dark Tema için) */
+    --text-color-light: #212529; /* Açık tema metin rengi */
+    --text-color-dark: #e9ecef; /* Koyu tema metin rengi */
+    --border-color: #dee2e6; /* Çerçeve rengi */
+    --card-background-light: #ffffff; /* Açık tema kart arka planı */
+    --card-background-dark: #495057; /* Koyu tema kart arka planı */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Tema için override (örnek, body'ye dark-mode sınıfı eklenince aktif olacak) */
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode .create-post-section {
+    background-color: var(--card-background-dark);
+    border-color: #6c757d;
+}
+
+body.dark-mode .create-post-section h2,
+body.dark-mode .create-post-form textarea,
+body.dark-mode .create-post-form input[type="url"],
+body.dark-mode .create-post-form .tag-input {
+    color: var(--text-color-dark);
+    background-color: #3f474f; /* Daha koyu input arka planı */
+    border-color: #5a6268;
+}
+
+body.dark-mode .create-post-form textarea::placeholder,
+body.dark-mode .create-post-form input::placeholder {
+    color: #a0a8b0;
+}
+
+body.dark-mode .icon-button {
+    color: var(--primary-color); /* İkon rengi aynı kalabilir veya ayarlanabilir */
+}
+
+
+/* create-post-section Stilleri */
+.create-post-section {
+    background-color: #8494a7;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px; /* Post akışından ayırmak için */
+    box-shadow: var(--box-shadow);
+    max-width: 700px; /* Belirli bir genişlikle sınırlayabiliriz */
+    margin-left: auto; /* Ortalamak için */
+    margin-right: auto; /* Ortalamak için */
+}
+
+.create-post-section h2 {
+    font-size: 1.5em;
+    color: var(--text-color-light);
+    margin-bottom: 20px;
+    text-align: center; 
+    background-color: #8494a7;
+
+}
+
+.create-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    
+}
+
+.create-post-form textarea {
+    
+    min-height: 100px; /* Minimum yükseklik */
+    padding: 10px;
+    
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    resize: vertical; /* Sadece dikey olarak boyutlandırılabilir */
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+}
+
+.create-post-form textarea::placeholder {
+    color: #163552;
+}
+
+.create-post-form .post-options {
+   
+    display: flex;
+    align-items: center;
+    gap: 15px; /* İkon butonlar ve Publier butonu arasında boşluk */
+    flex-wrap: wrap; /* Küçük ekranlarda alt alta geçsinler */
+}
+
+.create-post-form .icon-button {
+    
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--primary-color); /* Ana renk */
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+.create-post-form .icon-button:hover {
+    color: #0056b3; /* Hover rengi */
+}
+
+.create-post-form .hidden-input {
+    display: none; /* Varsayılan olarak gizli */
+    flex-grow: 1; /* Göründüğünde boşluğu doldurur */
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 0.95em;
+}
+
+/* JavaScript ile .hidden-input'lar görünür olduğunda uygulanacak stil */
+.create-post-form .hidden-input.is-visible {
+    display: block; /* Veya flex, input'un doğasına göre */
+}
+
+
+.create-post-form .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    margin-left: auto; /* Butonu sağa hizalar (flex konteyneri içinde) */
+}
+
+.create-post-form .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.create-post-form .tag-input {
+    
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 0.8em;
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+}
+
+.create-post-form .tag-input::placeholder {
+    color: #6c757d;
+}
+
+/* Bölüm ayırıcı çizgi */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 40px auto; /* Üstte ve altta boşluk, ortalanmış */
+    width: 80%; /* Çizginin genişliği */
+    max-width: 600px;
+}
+
+/* Küçük ekranlar için medya sorguları */
+@media (max-width: 768px) {
+    .create-post-section {
+        margin: 20px 15px; /* Yan boşluklar */
+        padding: 15px;
+    }
+
+    .create-post-section h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
+    .create-post-form .post-options {
+        flex-direction: column; /* Küçük ekranlarda ikonları alt alta diz */
+        align-items: flex-start; /* Sola hizala */
+        gap: 10px;
+    }
+
+    .create-post-form .btn-primary {
+        width: 100%; /* Butonu tam genişlik yap */
+        margin-left: 0; /* Hizalamayı sıfırla */
+    }
+
+    .create-post-form .hidden-input.is-visible {
+        width: calc(100% - 20px); /* Padding'i hesaba kat */
+    }
+}
+
+.login-page,
+.register-page,
+.auth-card,
+.auth-container  {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+}
+
+.container {
+    display: flex;
+    
+    justify-content: space-between;
+    flex-grow: 1; /* Ekranın kalan alanını kaplar */
+    padding: 20px;
+}
+
+.auth-card {
+    background-color: var(--card-background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 400px; /* Kart genişliğini sınırla */
+}
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color-light);
+}
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Form elemanları arasında boşluk */
+}
+.form-group label i {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: var(--background-light);
+    color: var(--text-color-light);
+
+}
