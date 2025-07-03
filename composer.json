@@ -1,0 +1,14 @@
+{
+    "name": "my-app/tumbflow",
+    "autoload": {
+        "psr-4": {
+            "Controller\\": "src/Controller/",
+            "Model\\": "src/Model/",
+            "Entity\\": "src/Entity/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "altorouter/altorouter": "^2.0"
+    }
+}

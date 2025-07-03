@@ -1,0 +1,34 @@
+# Composer
+/vendor/
+composer.phar # Eğer varsa
+
+# Environment variables
+.env
+.env.local
+.env.*.local # Farklı ortamlar için (örn. .env.test.local)
+
+# Logs
+/logs/
+*.log
+
+# Cache and temporary files
+/tmp/
+/cache/
+*.tmp
+*.temp
+
+# IDE specific files
+.idea/          # PhpStorm / IntelliJ
+.vscode/        # VS Code
+.DS_Store       # macOS
+Thumbs.db       # Windows
+*.sublime-project
+*.sublime-workspace
+
+# Other common ignored files
+/.history/      # VS Code History Extension
+/web/uploads/   # Kullanıcı yüklemeleri (eğer public/uploads/ veya benzeri bir yerdeyse)
+/node_modules/  # Frontend bağımlılıkları (eğer bir frontend build süreci varsa)
+/dist/          # Frontend build çıktıları
+
+# --- NOT: composer.lock buraya eklenmez, çünkü commit edilmelidir ---
